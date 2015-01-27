@@ -16,3 +16,8 @@ git config --global alias.pug "push origin HEAD:refs/for/master"
 # on this computer. This means that you don't have to manually add '.DS_Store'
 # to every single '.gitignore' files.
 git config --global core.excludesfile ~/.gitignore_global
+
+# Setup Sublime Text as the default editor.
+# Make sure that `subl` in in your path.
+# For Mac OS X users: http://www.sublimetext.com/docs/3/osx_command_line.html
+git config --global core.editor "subl -n -w"
