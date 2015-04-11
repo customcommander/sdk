@@ -3,7 +3,6 @@
 # git lg1 format is: 'short_hash title (author, commit_date)'
 git config --global alias.lg1 "log --format='%Cred%h %Creset%s %Cblue(%an, %cr)'"
 git config --global alias.st "status"
-git config --global alias.pulr "pull --rebase"
 git config --global alias.b "branch"
 git config --global alias.cia "commit --amend"
 git config --global alias.com "checkout master"
