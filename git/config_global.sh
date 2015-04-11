@@ -11,9 +11,6 @@ git config --global alias.r3 "rebase -i HEAD~3"
 git config --global alias.r5 "rebase -i HEAD~5"
 git config --global alias.r10 "rebase -i HEAD~10"
 
-# Push to Gerrit for code review
-git config --global alias.pug "push origin HEAD:refs/for/master"
-
 # Setup a file that contains exclude patterns for every git repositories
 # on this computer. This means that you don't have to manually add '.DS_Store'
 # to every single '.gitignore' files.
