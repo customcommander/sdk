@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# checks whether a binary exists in your PATH
+bin_in_path () {
+    bin=$1
+    for path in $(echo $PATH | tr ':' '\n'); do
+    if [ -x "$path/$bin" ]; then
+        return 0
+    fi
+    done
+    return 1
+}
+
 # Absolute path to this script
 SCRIPT_DIR=$( cd $(dirname ${BASH_SOURCE[0]}) && pwd )
 
@@ -22,4 +33,7 @@ git config --global core.excludesfile ~/.gitignore_global
 # Setup Sublime Text as the default editor.
 # Make sure that `subl` in in your path.
 # For Mac OS X users: http://www.sublimetext.com/docs/3/osx_command_line.html
-git config --global core.editor "subl -n -w"
+bin_in_path 'subl'
+if [ $? == 0 ]; then
+    git config --global core.editor "subl -n -w"
+fi
