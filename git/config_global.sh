@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Absolute path to this script
+SCRIPT_DIR=$( cd $(dirname ${BASH_SOURCE[0]}) && pwd )
+
 # git lg1 format is: 'short_hash title (author, commit_date)'
 git config --global alias.lg1 "log --format='%Cred%h %Creset%s %Cblue(%an, %cr)'"
 git config --global alias.st "status"
@@ -13,6 +16,7 @@ git config --global alias.r10 "rebase -i HEAD~10"
 # Setup a file that contains exclude patterns for every git repositories
 # on this computer. This means that you don't have to manually add '.DS_Store'
 # to every single '.gitignore' files.
+cp $SCRIPT_DIR/.gitignore_global ~/
 git config --global core.excludesfile ~/.gitignore_global
 
 # Setup Sublime Text as the default editor.
