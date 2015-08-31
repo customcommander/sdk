@@ -18,6 +18,8 @@ SCRIPT_DIR=$( cd $(dirname ${BASH_SOURCE[0]}) && pwd )
 git config --global alias.lg1 "log --format='%Cred%h %Creset%s %Cblue(%an, %cr)'"
 git config --global alias.st "status"
 git config --global alias.b "branch"
+git config --global alias.delb "branch -d"
+git config --global alias.newb "checkout -b"
 git config --global alias.cia "commit --amend"
 git config --global alias.com "checkout master"
 git config --global alias.r3 "rebase -i HEAD~3"
