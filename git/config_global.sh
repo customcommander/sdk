@@ -19,6 +19,7 @@ git config --global alias.lg1 "log --format='%Cred%h %Creset%s %Cblue(%an, %cr)'
 git config --global alias.st "status"
 git config --global alias.b "branch"
 git config --global alias.delb "branch -d"
+git config --global alias.fdelb "branch -D"
 git config --global alias.newb "checkout -b"
 git config --global alias.cia "commit --amend"
 git config --global alias.com "checkout master"
